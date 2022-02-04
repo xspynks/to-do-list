@@ -1,2 +1,2 @@
 # to-do-list
-projeto de to do list
+Simples projeto de to-do-list com.
