@@ -1,0 +1,185 @@
+html {
+  height: 100vh;
+  background-image: url(images/goiania.jpg);
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  background-size: 100%;
+  overflow: auto;
+
+  /*linear-gradient(#002a32, #00696b);
+  */
+}
+
+/*.container {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}*/
+
+.main {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+  font-family: "Rowdies", cursive;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Comforter", cursive;
+  font-size: 36px;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+form {
+  display: flex;
+}
+
+.task-input {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 0;
+  border: 0;
+  outline: transparent;
+  width: 300px;
+  height: 45px;
+  font-family: inherit;
+  font-size: 22px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  font-family: "Rowdies", cursive;
+  background-color: rgba(253, 250, 250, 0.219);
+}
+
+.task-input::placeholder {
+  padding-left: 5px;
+  color: white;
+}
+
+.task-input:focus {
+  color: white;
+}
+
+.task-add {
+  font-size: 22px;
+  width: 100%;
+  color: white;
+  height: 45px;
+  background-color: rgba(253, 250, 250, 0.219);
+  margin: 0;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-add::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(252, 70, 100);
+  transform: translateX(-100%);
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.task-add:hover::before {
+  transform: translateX(0);
+}
+
+.tasksBoard {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  height: auto;
+
+  padding-bottom: 21px;
+  padding-right: 40px;
+  font-family: "Rowdies", cursive;
+  box-sizing: border-box;
+
+  /* display: none; */
+}
+
+ul {
+  list-style: none;
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+  padding-left: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+li {
+  border-bottom: 1px solid #d1603d;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 1.3em;
+  color: white;
+}
+
+.delete {
+  background-color: #ff5666;
+  padding: 0px 3px 0px 3px;
+  margin-right: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+label {
+  padding-left: 5px;
+}
+
+a {
+  float: right;
+  text-align: right;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.clear-box {
+  width: 400px;
+  display: flex;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 25px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+#clear:hover {
+  cursor: pointer;
+  color: #ff5666;
+}
+
+@media (max-width: 500px) {
+  .main {
+    margin: auto;
+    width: 100%;
+  }
+  input[type="text"] {
+    width: 80%;
+  }
+  button {
+    width: 10%;
+  }
+}
